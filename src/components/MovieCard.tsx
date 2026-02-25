@@ -1,6 +1,6 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SearchedMovieItems } from '../api/omdb';
-import { s, vs } from 'react-native-size-matters';
+import { s } from 'react-native-size-matters';
 import { movieCardColors } from '../themes/colors';
 
 export default function MovieCard({ movie }: { movie: SearchedMovieItems }) {
@@ -19,12 +19,13 @@ export default function MovieCard({ movie }: { movie: SearchedMovieItems }) {
 
 const styles = StyleSheet.create({
     movieCardStyle: {
-        width: "45%",
-        margin: s(7),
-        padding: s(5),
-        borderWidth: s(2),
-        borderRadius: s(10),
+        width: "48%",
+        margin: s(4),
+        padding: s(4),
+        borderWidth: s(1),
+        borderRadius: s(8),
         backgroundColor: movieCardColors.backgroundColor,
+        borderColor: movieCardColors.borderColor
     },
     movieCardDetailStyle: {
         alignSelf: "center",
@@ -34,21 +35,21 @@ const styles = StyleSheet.create({
     imageStyle: {
         width: "100%",
         aspectRatio: 4 / 5,
-        borderRadius: s(10),
+        borderRadius: s(8),
         backgroundColor: movieCardColors.noneImgBgColor
     },
     textsContainerStyle: {
         alignItems: "center",
-        padding: s(5),
+        padding: s(4),
         gap: s(2)
     },
     titleStyle: {
         color: movieCardColors.titleTextColor,
         fontWeight: "bold",
-        fontSize: s(14)
+        fontSize: s(16)
     },
     yearStyle: {
         color: movieCardColors.yearTextColor,
-        fontSize: s(10)
+        fontSize: s(12)
     }
 });

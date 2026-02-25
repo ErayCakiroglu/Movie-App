@@ -9,16 +9,16 @@ export const tabBarColors = {
 export const screenColors = {
     backgroundColor: "#30364f",
     searchBackgroundColor: "#acbac4",
-    searchBorderColor: "#f0f0db",
+    borderColor: "#f0f0db",
     searchTextColor: "#30364f",
     buttonBackgroundColor: "#30364f",
     buttonTextColor: "#acbac4",
-    buttonBorderColor: "#f0f0db"
 }
 
 export const movieCardColors = {
     backgroundColor: "#f0f0db",
     titleTextColor: "#30364f",
     yearTextColor: "#547792",
-    noneImgBgColor: "#30364f"
+    noneImgBgColor: "#30364f",
+    borderColor: "#547792"
 }
