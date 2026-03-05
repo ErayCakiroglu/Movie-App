@@ -1,4 +1,4 @@
-export const tabBarColors = {
+export const TABBARCOLORS = {
     background: "#30364f",
     activeTintColor: "#f0f0db",
     inActiveTintColor: "#acbac4",
@@ -6,7 +6,7 @@ export const tabBarColors = {
     textColor: "#f0f0db"
 }
 
-export const screenColors = {
+export const SCREENCOLORS = {
     backgroundColor: "#30364f",
     searchBackgroundColor: "#acbac4",
     borderColor: "#f0f0db",
@@ -15,10 +15,12 @@ export const screenColors = {
     buttonTextColor: "#acbac4",
 }
 
-export const movieCardColors = {
+export const CARDCOLORS = {
     backgroundColor: "#f0f0db",
     titleTextColor: "#30364f",
     yearTextColor: "#547792",
     noneImgBgColor: "#30364f",
-    borderColor: "#547792"
+    borderColor: "#547792",
+    activeBackgroundColor: "#f0f0db",
+    inActiveBackgroundColor: "#acbac4"
 }

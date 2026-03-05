@@ -4,7 +4,7 @@ import Ionicons from '@expo/vector-icons/Ionicons';
 import { s } from "react-native-size-matters";
 import CategoriesScreen from "../screens/CategoriesScreen";
 import SavedScreen from "../screens/SavedScreen";
-import { tabBarColors } from "../themes/colors";
+import { TABBARCOLORS } from "../themes/colors";
 import { language } from "../constants/languageConstant";
 
 const Tab = createBottomTabNavigator();
@@ -13,22 +13,22 @@ export default function BottomTabs() {
     return (
         <Tab.Navigator screenOptions={{
             headerStyle: {
-                backgroundColor: tabBarColors.background,
-                borderBottomColor: tabBarColors.borderColor,
+                backgroundColor: TABBARCOLORS.background,
+                borderBottomColor: TABBARCOLORS.borderColor,
                 borderBottomWidth: s(1),
 
             },
             headerTitleStyle: {
-                color: tabBarColors.textColor,
+                color: TABBARCOLORS.textColor,
                 fontWeight: "bold"
             },
             tabBarStyle: {
-                backgroundColor: tabBarColors.background,
-                borderTopColor: tabBarColors.borderColor,
+                backgroundColor: TABBARCOLORS.background,
+                borderTopColor: TABBARCOLORS.borderColor,
                 borderTopWidth: s(1)
             },
-            tabBarActiveTintColor: tabBarColors.activeTintColor,
-            tabBarInactiveTintColor: tabBarColors.inActiveTintColor,
+            tabBarActiveTintColor: TABBARCOLORS.activeTintColor,
+            tabBarInactiveTintColor: TABBARCOLORS.inActiveTintColor,
         }}>
             <Tab.Screen name="HomeScreen" component={HomeScreen} options={{
                 title: language.EN.home,

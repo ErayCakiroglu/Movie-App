@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Text, StyleSheet, View, TextInput, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { screenColors } from '../themes/colors';
+import { SCREENCOLORS } from '../themes/colors';
 import { s, vs } from 'react-native-size-matters';
 import { language } from '../constants/languageConstant';
 import { captureError, SearchedMovieItems, searchMovies } from "../api/omdb";
@@ -88,7 +88,7 @@ export default function HomeScreen() {
         <SafeAreaView style={styles.container} edges={[]}>
             {/* Search */}
             <View style={styles.searchContainer}>
-                <TextInput style={styles.search} placeholder={language.EN.searchPlaceholder} placeholderTextColor={screenColors.backgroundColor} returnKeyType='search'
+                <TextInput style={styles.search} placeholder={language.EN.searchPlaceholder} placeholderTextColor={SCREENCOLORS.backgroundColor} returnKeyType='search'
                     onChangeText={setSearch} />
                 <TouchableOpacity style={styles.searchButton} onPress={handleSearch}>
                     <Text style={styles.searchButtonText}>{language.EN.search}</Text>
@@ -102,7 +102,7 @@ export default function HomeScreen() {
             </View>
             {loader ? (
                 <View style={styles.indicatorContainer}>
-                    <ActivityIndicator size={'large'} color={screenColors.borderColor} />
+                    <ActivityIndicator size={'large'} color={SCREENCOLORS.borderColor} />
                 </View>) :
                 error ?
                     <View style={styles.errorContainer}>
@@ -118,7 +118,7 @@ export default function HomeScreen() {
                         showsVerticalScrollIndicator={false}
                         ListFooterComponent={
                             loadingMorePage ?
-                                <ActivityIndicator color={screenColors.borderColor} />
+                                <ActivityIndicator color={SCREENCOLORS.borderColor} />
                                 : <Text style={styles.noMoreMovies}>{language.EN.noMoreMovies}</Text>} />)}
         </SafeAreaView>
     )
@@ -128,7 +128,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         alignItems: "center",
-        backgroundColor: screenColors.backgroundColor
+        backgroundColor: SCREENCOLORS.backgroundColor
     },
     searchContainer: {
         flexDirection: "row",
@@ -140,23 +140,23 @@ const styles = StyleSheet.create({
     search: {
         flex: 1,
         padding: s(12),
-        backgroundColor: screenColors.searchBackgroundColor,
+        backgroundColor: SCREENCOLORS.searchBackgroundColor,
         borderWidth: s(2),
         borderRadius: s(4),
-        borderColor: screenColors.borderColor,
-        color: screenColors.searchTextColor
+        borderColor: SCREENCOLORS.borderColor,
+        color: SCREENCOLORS.searchTextColor
     },
     searchButton: {
         alignItems: "center",
         justifyContent: "center",
-        backgroundColor: screenColors.buttonBackgroundColor,
-        borderColor: screenColors.borderColor,
+        backgroundColor: SCREENCOLORS.buttonBackgroundColor,
+        borderColor: SCREENCOLORS.borderColor,
         borderWidth: s(2),
         borderRadius: s(4),
         padding: s(4)
     },
     searchButtonText: {
-        color: screenColors.buttonTextColor,
+        color: SCREENCOLORS.buttonTextColor,
         fontWeight: "bold"
     },
     totalResultContainer: {
@@ -165,7 +165,7 @@ const styles = StyleSheet.create({
     totalResultBox: {
         height: vs(32),
         borderWidth: s(2),
-        borderColor: screenColors.borderColor,
+        borderColor: SCREENCOLORS.borderColor,
         padding: s(4),
         marginTop: s(8),
         alignSelf: "flex-end",
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
     totalResultText: {
         fontSize: s(12),
         fontWeight: "bold",
-        color: screenColors.buttonTextColor
+        color: SCREENCOLORS.buttonTextColor
     },
     indicatorContainer: {
         flex: 1,
@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
         justifyContent: "center"
     },
     errorText: {
-        color: screenColors.buttonTextColor,
+        color: SCREENCOLORS.buttonTextColor,
         fontWeight: "bold",
         fontSize: s(16)
     },
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
         width: "90%"
     },
     noMoreMovies: {
-        color: screenColors.buttonTextColor,
+        color: SCREENCOLORS.buttonTextColor,
         fontWeight: "bold",
         fontSize: s(16),
         textAlign: "center",
